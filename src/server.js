@@ -22,7 +22,9 @@ mongoose
     "mongodb+srv://Gaamy:nimrod19966@neemcluster.nlnhh.mongodb.net/plan?retryWrites=true&w=majority"
   )
   .then(() => {
-    app.listen(9000, () => {
+    const PORT = process.env.PORT || 9000;
+
+    app.listen(PORT, () => {
       console.log("Server started on port 9000");
     });
   });
