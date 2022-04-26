@@ -2,7 +2,7 @@ const plansModal = require("../models/planModel");
 
 const addPlanController = async (req, res) => {
   try {
-    const plan = request.body;
+    const plan = req.body;
 
     const model = new plansModal(plan);
     await model.save();

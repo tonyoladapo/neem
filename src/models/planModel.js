@@ -1,19 +1,16 @@
 const mongoose = require("mongoose");
 
 const planSchema = new mongoose.Schema({
-  amountForCOntribution: String,
+  amountForContribution: String,
   date: String,
   name: String,
-  purpose: [
-    {
-      icon: Object,
-      iconName: String,
-      iconType: String,
-      id: Number,
-      name: String,
-    },
-  ],
-  selectedRemider: {
+  purpose: {
+    iconName: String,
+    iconType: String,
+    id: Number,
+    name: String,
+  },
+  selectedReminder: {
     label: String,
     value: Number,
   },
