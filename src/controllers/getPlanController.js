@@ -8,7 +8,7 @@ const getPlanController = async (req, res) => {
     res.send(plan);
   } else {
     const plans = await planModel.find();
-    response.send(plans);
+    res.send(plans);
   }
 };
 
