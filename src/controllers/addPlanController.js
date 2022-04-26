@@ -4,7 +4,7 @@ const addPlanController = async (req, res) => {
   try {
     const plan = request.body;
 
-    const model = new plansModal(movie);
+    const model = new plansModal(plan);
     await model.save();
 
     res.send({
