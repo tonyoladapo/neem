@@ -1,6 +1,6 @@
 const planModel = require("../models/planModel");
 
-const deletePlanController = (req, res) => {
+const deletePlanController = async (req, res) => {
   const id = req.params.id;
 
   const deletedPlan = await planModel.findOneAndDelete({ _id: id });
